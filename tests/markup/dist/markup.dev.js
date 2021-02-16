@@ -24,7 +24,7 @@ if (markup) {
 
   var scripts = document.querySelectorAll('script:not([src])');
   scripts.forEach(function (itm) {
-    if (itm.innerText.indexOf("timeoutDialog") > 0) {
+    if (itm.innerText.indexOf("timeoutDialog") > 0 && itm.innerText.indexOf("countdown") > 0) {
       err = true;
 
       if (errMessage > "") {
@@ -43,17 +43,6 @@ if (markup) {
     }
 
     errMessage = errMessage + "meta refresh used instead of a timeout dialog";
-  } // check meta version is not placed outside of head
-
-
-  if (document.querySelector('body meta[name="hmrc-timeout-dialog"]')) {
-    err = true;
-
-    if (errMessage > "") {
-      errMessage = errMessage + ", ";
-    }
-
-    errMessage = errMessage + "meta timeout placed outside head";
   }
 
   var itmCopy = ""; // check for meta inside head

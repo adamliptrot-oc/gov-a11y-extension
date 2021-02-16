@@ -20,7 +20,7 @@ if(markup){
         // check for old style timeout
         var scripts = document.querySelectorAll('script:not([src])');
         scripts.forEach(function(itm){
-            if(itm.innerText.indexOf("timeoutDialog") > 0){
+            if(itm.innerText.indexOf("timeoutDialog") > 0 && itm.innerText.indexOf("countdown") > 0){
                 err = true;
                 if( errMessage > "" ){ errMessage =  errMessage + ", "}
                 errMessage = errMessage + "old style timeout present";
@@ -32,14 +32,6 @@ if(markup){
             err = true;
             if( errMessage > "" ){ errMessage =  errMessage + ", "}
             errMessage = errMessage + "meta refresh used instead of a timeout dialog";
-        }
-
-
-        // check meta version is not placed outside of head
-        if(document.querySelector('body meta[name="hmrc-timeout-dialog"]')){
-            err = true;
-            if( errMessage > "" ){ errMessage =  errMessage + ", "}
-            errMessage = errMessage + "meta timeout placed outside head";
         }
 
 
