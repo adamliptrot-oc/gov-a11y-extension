@@ -1,4 +1,0 @@
-Outline:
-- fieldsets
-- labels
-- legends

@@ -97,3 +97,10 @@ if(markup){
 // check GOVUK logo links to correct url
 // check service name in banner links to correct url
 // check link markup - if it has visually-hidden but no aria hidden
+// Tables
+// Empty labels or legends
+// Use dl for CYA
+// Highlight empty headings, legends and labels
+// JS Event handlers
+// Inline styles
+// Link CYA markup
