@@ -1,0 +1,21 @@
+.hmrc-ally-aria {
+    display: none;
+}
+.hmrc-ally-aria--active .hmrc-ally-aria {
+    display: flex!important;
+    flex-wrap: wrap;
+}
+
+.hmrc-ally-aria-inlabel span {
+    background: rgb(41, 142, 196);
+}
+.hmrc-ally-aria-missing span {
+    background: rgb(7, 102, 136);
+}
+.hmrc-ally-aria-info span {
+    background: rgb(9, 83, 96);
+}
+.hmrc-ally-inputs--active main .hmrc-ally-aria + *:not([class^="hmrc-ally-"]) {
+    outline-offset: 10px;
+    outline: rgb(9, 83, 96) solid 2px;
+}

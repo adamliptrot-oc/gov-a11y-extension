@@ -1,0 +1,52 @@
+.hmrc-ally-outlines--active h1,
+.hmrc-ally-outlines--active h2,
+.hmrc-ally-outlines--active h3,
+.hmrc-ally-outlines--active h4,
+.hmrc-ally-outlines--active h5,
+.hmrc-ally-outlines--active h6 {
+    outline: 3px dashed darkorchid!important;
+    outline-offset: 2px;
+    position: relative;
+}
+
+.hmrc-ally-outlines--active label {
+    outline: 3px dashed #fe00ff!important;
+    position: relative;
+}
+.hmrc-ally-outlines--active h1 label {
+    outline-offset: -3px;
+}
+
+.hmrc-ally-outlines--active legend {
+    outline: 3px dashed #0093ff!important;
+    outline-offset: 6px;
+}
+
+.hmrc-ally-outlines--active fieldset {
+    outline: 3px dotted sienna!important;
+    outline-offset: 4px;
+    position: relative;
+}
+
+.hmrc-ally-outlines--active table {
+    outline: 3px dotted green!important;
+    outline-offset: 4px;
+    position: relative;
+}
+
+.hmrc-ally-outlines--active dl {
+    outline: 3px dotted lightseagreen!important;
+    outline-offset: 4px;
+    position: relative;
+}
+
+
+.hmrc-ally-outlines {
+    display: none;
+}
+.hmrc-ally-outlines--active .hmrc-ally-outlines {
+    display: flex!important;
+    flex-wrap: wrap;
+}
+
+

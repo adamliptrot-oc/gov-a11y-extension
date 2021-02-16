@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HMRC A11y</title>
+    <link href="popup.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="panel">
+        <h1>HMRC A11y</h1>
+        <div class="innerpanel">
+          <div class="block">
+            <button id="outlines" role="switch" aria-checked="false" aria-label="Show outlines"><span></span></button>
+            <label for="outlines">Show outlines</label>
+            <div class="legend">
+                <div><span class="key key--fieldset"></span> Fieldset</div>
+                <div><span class="key key--label"></span> Label</div>
+                <div><span class="key key--legend"></span> Legend</div>
+                <div><span class="key key--heading"></span> Heading</div>
+                <div><span class="key key--table"></span> Table</div>
+                <div><span class="key key--dl"></span> Definition list</div>
+            </div>
+          </div>
+
+          <div class="block">
+            <button id="pagetitle" role="switch" aria-checked="false" aria-label="Check page title"><span></span></button>
+            <label for="pagetitle">Check page title</label>
+          </div>
+
+          <div class="block">
+            <button id="aria" role="switch" aria-checked="false" aria-label="Check aria"><span></span></button>
+            <label for="aria">Check aria</label>
+          </div>
+
+          <div class="block">
+            <button id="hiddencopy" role="switch" aria-checked="false" aria-label="Show hidden copy"><span></span></button>
+            <label for="hiddencopy">Show hidden copy</label>
+          </div>
+
+          <div class="block">
+            <button id="inputs" role="switch" aria-checked="false" aria-label="Check inputs"><span></span></button>
+            <label for="inputs">Check inputs</label>
+          </div>
+
+          <div class="block">
+            <button id="markup" role="switch" aria-checked="false" aria-label="Check markup"><span></span></button>
+            <label for="markup">Check markup</label>
+          </div>
+
+
+            <!-- <div class="block">
+                <button id="a11yCSS" role="switch" aria-checked="false" aria-label="Show a11y CSS"><span></span></button>
+                <label for="a11yCSS">Show form a11y and aria-label</label>
+
+            </div>
+
+            <div class="block">
+                <button id="hiddenCopy" role="switch" aria-checked="false" aria-label="Show hidden copy"><span></span></button>
+                <label for="hiddenCopy">Show hidden copy</label>
+            </div>
+
+            <div class="block">
+                <button id="errorHint" role="switch" aria-checked="false" aria-label="Show issues with hints or errors"><span></span></button>
+                <label for="errorHint">Show issues with hints or errors</label>
+                <p>This will show if errors and hints are associated with inputs or fieldsets</p>
+            </div>
+
+            <div class="block"></div> -->
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

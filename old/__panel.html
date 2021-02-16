@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>HMRC A11y</title>
+    <link href="panel.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="panel">
+        <h1>HMRC a11y Checker</h1>
+
+        <div class="innerpanel">
+            <div class="block">
+                <button id="a11yCSS" role="switch" aria-checked="false" aria-label="Show a11y CSS"><span></span></button>
+                <label for="a11yCSS">Show form a11y and aria-label</label>
+                <div class="legend">
+                    <div><span class="key key--fieldset"></span> Fieldset</div>
+                    <div><span class="key key--label"></span> Label</div>
+                    <div><span class="key key--legend"></span> Legend</div>
+                    <div><span class="key key--heading"></span> Legend</div>
+                    <div><span class="key key--aria-label"></span> aria-label</div>
+                </div>
+            </div>
+
+            <div class="block">
+                <button id="hiddenCopy" role="switch" aria-checked="false" aria-label="Show hidden copy"><span></span></button>
+                <label for="hiddenCopy">Show hidden copy</label>
+            </div>
+
+            <div class="block">
+                <button id="errorHint" role="switch" aria-checked="false" aria-label="Show issues with hints or errors"><span></span></button>
+                <label for="errorHint">Show issues with hints or errors</label>
+                <p>This will show if errors and hints are associated with inputs or fieldsets</p>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="panel.js"></script>
+    <script src="errorhint.js"></script>
+    <script src="hiddencopy.js"></script>
+    <script src="a11y.js"></script>
+</body>

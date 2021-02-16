@@ -1,0 +1,17 @@
+#hmrc-a11y {
+    display: none;
+}
+.hmrc-ally-ui--active {
+    margin-left: 300px;
+}
+.hmrc-ally-ui--active #hmrc-a11y {
+    display: block;
+    width: 300px;
+    height: 100%;
+    float: left;
+    position: fixed;
+    border: none;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}

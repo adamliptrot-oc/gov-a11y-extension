@@ -1,0 +1,244 @@
+.hmrc-ally-err {
+	font-family: system-ui, sans-serif;
+    background: rgb(255, 68, 0);
+    color: white;
+    font-size: 14px;
+	font-weight: bold;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px black;
+}
+
+
+
+/* .hmrc-ally-outline--active [tabindex]:not([tabindex="0"]):not([tabindex="-1"]):after {
+	content: "tabindex" !important;
+    font-family: system-ui, sans-serif;
+    background: rgb(255, 68, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px black;
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+
+.hmrc-ally-outline--active h1:empty::after,
+.hmrc-ally-outline--active h2:empty::after,
+.hmrc-ally-outline--active h3:empty::after,
+.hmrc-ally-outline--active h4:empty::after,
+.hmrc-ally-outline--active h5:empty::after,
+.hmrc-ally-outline--active h6:empty::after,
+.hmrc-ally-outline--active legend:empty::after,
+.hmrc-ally-outline--active label:empty::after {
+	content: "empty" !important;
+    font-family: system-ui, sans-serif;
+    background: rgb(255, 68, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hmrc-ally-outline--active [style]::after {
+	content: "Inline styles" !important;
+	font-family: system-ui, sans-serif;
+    background: rgb(255, 68, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* .hmrc-ally-outline--active legend:empty {}
+
+
+.hmrc-ally-outline--active input[onblur] + *::after,
+.hmrc-ally-outline--active input[onchange] + *::after,
+.hmrc-ally-outline--active input[onfocus] + *::after,
+.hmrc-ally-outline--active input[onsubmit] + *::after,
+.hmrc-ally-outline--active input[onkeydown] + *::after,
+.hmrc-ally-outline--active input[onkeypress] + *::after,
+.hmrc-ally-outline--active input[onkeyup] + *::after,
+.hmrc-ally-outline--active input[onclick] + *::after,
+.hmrc-ally-outline--active input[ondblclick] + *::after,
+.hmrc-ally-outline--active input[onmousedown] + *::after,
+.hmrc-ally-outline--active input[onmousemove] + *::after,
+.hmrc-ally-outline--active input[onmouseout] + *::after,
+.hmrc-ally-outline--active input[onmouseover] + *::after,
+.hmrc-ally-outline--active input[onmouseup] + *::after,
+.hmrc-ally-outline--active input[onmousewheel] + *::after,
+.hmrc-ally-outline--active input[onscroll] + *::after{
+	content: "js event attribute" !important;
+	font-family: system-ui, sans-serif;
+    background: rgb(255, 68, 0);
+    color: white;
+    border-radius: 10px;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px 1px black;
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+/*
+
+
+.hmrc-ally-outline--active [type="radio"]:not([name])+::before,
+.hmrc-ally-outline--active [type="checkbox"]:not(:only-of-type):not([name])+::before {
+	content: "Missing [name]" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active [type="radio"]+::before {
+	content: "[radio] outside any <fieldset>" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active [onload]::after,
+.hmrc-ally-outline--active [onblur]::after,
+.hmrc-ally-outline--active [onchange]::after,
+.hmrc-ally-outline--active [onfocus]::after,
+.hmrc-ally-outline--active [onsubmit]::after,
+.hmrc-ally-outline--active [onkeydown]::after,
+.hmrc-ally-outline--active [onkeypress]::after,
+.hmrc-ally-outline--active [onkeyup]::after,
+.hmrc-ally-outline--active [onclick]::after,
+.hmrc-ally-outline--active [ondblclick]::after,
+.hmrc-ally-outline--active [onmousedown]::after,
+.hmrc-ally-outline--active [onmousemove]::after,
+.hmrc-ally-outline--active [onmouseout]::after,
+.hmrc-ally-outline--active [onmouseover]::after,
+.hmrc-ally-outline--active [onmouseup]::after,
+.hmrc-ally-outline--active [onmousewheel]::after,
+.hmrc-ally-outline--active [onscroll]::after {
+	content: "JavaScript event attribute" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active [id^="1"]::after,
+.hmrc-ally-outline--active [id^="2"]::after,
+.hmrc-ally-outline--active [id^="3"]::after,
+.hmrc-ally-outline--active [id^="4"]::after,
+.hmrc-ally-outline--active [id^="5"]::after,
+.hmrc-ally-outline--active [id^="6"]::after,
+.hmrc-ally-outline--active [id^="7"]::after,
+.hmrc-ally-outline--active [id^="8"]::after,
+.hmrc-ally-outline--active [id^="9"]::after,
+.hmrc-ally-outline--active [id^="0"]::after,
+.hmrc-ally-outline--active [id^="--"]::after,
+.hmrc-ally-outline--active [id^="-1"]::after,
+.hmrc-ally-outline--active [id^="-2"]::after,
+.hmrc-ally-outline--active [id^="-3"]::after,
+.hmrc-ally-outline--active [id^="-4"]::after,
+.hmrc-ally-outline--active [id^="-5"]::after,
+.hmrc-ally-outline--active [id^="-6"]::after,
+.hmrc-ally-outline--active [id^="-7"]::after,
+.hmrc-ally-outline--active [id^="-8"]::after,
+.hmrc-ally-outline--active [id^="-9"]::after,
+.hmrc-ally-outline--active [id^="-0"]::after {
+	content: "Invalid [id]" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active button[aria-label=""]::after {
+	content: "Empty [aria-label]" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active button[aria-labelledby=""]::after {
+	content: "Empty [aria-labelledby]" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active label[for=""]::after,
+.hmrc-ally-outline--active label[for=" "]::after {
+	content: "Empty [for]" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active [tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after {
+	content: "Disrupting tab order" !important;
+	background: #d90b0b !important;
+}
+
+.hmrc-ally-outline--active [role="heading"]:not([aria-level])::after {
+	content: "No [aria-level]" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active label:not([for])::after {
+	content: "Missing [for]" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active [target$="blank"]:not([rel])::after,
+.hmrc-ally-outline--active [target$="blank"]:not([rel*="noopener"])::after,
+.hmrc-ally-outline--active [target$="blank"]:not([rel*="noreferrer"])::after {
+	content: "Unsafe [target]" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active [style]::after {
+	content: "Inline styles" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active table:not([role="presentation"])>caption:not(:first-child)::after,
+.hmrc-ally-outline--active table:not([role="presentation"])>*:first-child:not(caption)::after {
+	content: "Data table must start with <caption>" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active table>tfoot~thead::after,
+.hmrc-ally-outline--active table>tbody~tfoot::after,
+.hmrc-ally-outline--active table>tbody~thead::after,
+.hmrc-ally-outline--active table>tfoot~colgroup::after,
+.hmrc-ally-outline--active table>tbody~colgroup::after,
+.hmrc-ally-outline--active table>tbody~colgroup::after {
+	content: "Wrong order for <thead>, <tfoot> or <tbody>" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active fieldset>*:not(legend):first-child::after,
+.hmrc-ally-outline--active fieldset>legend:not(:first-child)::after {
+	content: "<fieldset> must start with <legend>" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active details>*:not(summary):first-child::after,
+.hmrc-ally-outline--active details>summary:not(:first-child)::after {
+	content: "<details> must start with <summary>" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active ul>:not(li)::after,
+.hmrc-ally-outline--active ol>:not(li)::after,
+.hmrc-ally-outline--active :not(ul):not(ol)>li::after {
+	content: "Invalid <li> nesting" !important;
+	background: #f50 !important;
+}
+
+.hmrc-ally-outline--active [target$="blank"]::after {
+	content: "Link opening a new tab" !important;
+	background: green !important;
+}
+
+.hmrc-ally-outline--active a.govuk-button::after,
+.hmrc-ally-outline--active a.govuk-button::after {
+	content: "link styled as button" !important;
+	background: green !important;
+} */
+
+
+
+

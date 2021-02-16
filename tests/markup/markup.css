@@ -1,0 +1,8 @@
+.hmrc-ally-markup {
+    display: none;
+}
+.hmrc-ally-markup--active .hmrc-ally-markup {
+    display: flex!important;
+    flex-wrap: wrap;
+}
+

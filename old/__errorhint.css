@@ -1,0 +1,19 @@
+.hmrc-ally-errorHint--active .hmrc-ally-inlabel:after,
+.hmrc-ally-errorHint--active .hmrc-ally-errorHint:after {
+    font-family: system-ui, sans-serif;
+    color: black;
+    padding: 0.2em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hmrc-ally-errorHint--active .hmrc-ally-errorHint:after {
+    content: "Missing aria";
+    background: rgb(255, 68, 0);
+    color: white;
+}
+
+.hmrc-ally-errorHint--active .hmrc-ally-inlabel:after {
+    content: "In label/legend";
+    background: gold;
+}

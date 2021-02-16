@@ -1,0 +1,98 @@
+.hmrc-ally-note {
+    font-family: system-ui, sans-serif;
+    display: inline-block;
+    line-height: 1.1;
+    position: relative;
+    margin: 0.4em 1em 0.4em 0;
+    padding: 0 0.5em 0 0;
+    background: #e4e4e4;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.4);
+    color: #333;
+    font-size: 0.8rem;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+.hmrc-ally-note span {
+    color: white;
+    background-color: black;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    display: inline-block;
+    height: 100%;
+    line-height: 2;
+}
+.hmrc-ally-note a {
+    color: #333!important;
+    text-decoration: underline;
+}
+
+.hmrc-ally-warn,
+.hmrc-ally-info {
+    margin-left: 0.4em;
+}
+.hmrc-ally-warn span,
+.hmrc-ally-info span {
+    position: relative;
+    padding-left: calc(1.5em + 0.5em);
+}
+.hmrc-ally-warn span:after,
+.hmrc-ally-info span:after {
+    content: "";
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    left: -0.8em;
+    top: -0.5em;
+    border: 1px solid rgba(0,0,0,0.5);
+
+}
+
+.hmrc-ally-info span:after {
+    background: center / calc(100% - 0.4em) calc(100% - 0.4em) no-repeat url("chrome-extension://__MSG_@@extension_id__/img/info.svg"), black;
+        /* repeating-linear-gradient(
+            -45deg,
+            black,
+            black 7px,
+            yellow 7px,
+            yellow 14px
+        ); */
+    border-radius: 50%;
+}
+
+.hmrc-ally-warn span:after {
+    background: 50% 70% / calc(100% - 0.4em) calc(100% - 0.4em) no-repeat url("chrome-extension://__MSG_@@extension_id__/img/warning.svg"), black;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+
+.hmrc-ally-outlines .hmrc-ally-note span,
+.hmrc-ally-outlines .hmrc-ally-warn span,
+.hmrc-ally-outlines .hmrc-ally-info span {
+    background: teal;
+}
+.hmrc-ally-markup .hmrc-ally-note span,
+.hmrc-ally-markup .hmrc-ally-warn span,
+.hmrc-ally-markup .hmrc-ally-info span {
+    background: rgb(21, 108, 140);
+}
+.hmrc-ally-pagetitles .hmrc-ally-note span,
+.hmrc-ally-pagetitles .hmrc-ally-warn span,
+.hmrc-ally-pagetitles .hmrc-ally-info span {
+    background: rebeccapurple;
+}
+
+.hmrc-ally-inputs .hmrc-ally-note span,
+.hmrc-ally-inputs .hmrc-ally-warn span,
+.hmrc-ally-inputs .hmrc-ally-info span {
+    background: rgb(196, 41, 160);
+}
+
+.hmrc-ally-aria .hmrc-ally-note span,
+.hmrc-ally-aria .hmrc-ally-warn span,
+.hmrc-ally-aria .hmrc-ally-info span {
+    background: rgb(41, 142, 196);
+}

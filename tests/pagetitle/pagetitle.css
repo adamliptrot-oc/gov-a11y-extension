@@ -1,0 +1,7 @@
+.hmrc-ally-pagetitles {
+	display: none;
+}
+.hmrc-ally-pagetitle--active .hmrc-ally-pagetitles {
+    display: flex!important;
+    flex-wrap: wrap;
+}

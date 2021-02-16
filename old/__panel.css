@@ -1,0 +1,89 @@
+body {
+    background-color: snow;
+    font-family: system-ui, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 21px;
+    font-weight: 100;
+    margin: 0 0 1em;
+}
+button {
+    border: 1px solid #333;
+    background: white;
+    border-radius: 20px;
+    width: 2rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
+button span {
+    border-radius: 50%;
+    position: absolute;
+    display: inline-block;
+    width: 1em;
+}
+button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.5);
+}
+button[aria-checked="false"] span {
+    background: grey;
+    top: 2px;
+    left: 2px;
+    right: auto;
+    bottom: 2px;
+}
+button[aria-checked="true"] span {
+    background: blue;
+    top: 2px;
+    left: auto;
+    right: 2px;
+    bottom: 2px;
+}
+.panel {
+    padding: 20px;
+}
+.innerpanel {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+}
+.block {
+    margin-bottom: 1rem;
+}
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    filter: grayscale(0);
+    transition: filter 0.25s ease;
+}
+[aria-checked="false"] ~ .legend {
+    filter: grayscale(1);
+}
+.legend > div {
+    margin-right: 20px;
+}
+.key {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    outline: 1px solid black;
+}
+.key--label {
+    background: #fe00ff;
+}
+.key--legend {
+    background: #0093ff;
+}
+.key--heading {
+    background: darkorchid;
+}
+.key--fieldset {
+    background: sienna;
+}
+.key--aria-label {
+    background: darkorange;
+}

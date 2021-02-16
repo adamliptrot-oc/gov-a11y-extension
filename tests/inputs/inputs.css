@@ -1,0 +1,12 @@
+.hmrc-ally-inputs {
+    display: none;
+}
+.hmrc-ally-inputs--active .hmrc-ally-inputs {
+    display: flex!important;
+    flex-wrap: wrap;
+}
+
+.hmrc-ally-inputs--active .hmrc-ally-inputs + *:not([class^="hmrc-ally-"]) {
+    outline-offset: 10px;
+    outline: rgb(222, 23, 165) solid 2px;
+}
