@@ -1,9 +1,9 @@
 # gov-a11y-extension
-
+A Chrome extension for assisting in testing government services for accessibility and adherence to published patterns.
 
 ## Usage
 
-1. [Download](https://github.com/adamliptrot-oc/gov-a11y-extension/archive/master.zip) the extension files
+1. [Download](https://github.com/adamliptrot-oc/gov-a11y-extension/archive/main.zip) the extension files
 2. Open [chrome://extensions](chrome://extensions) in your __Chrome__ browser
 3. Using the slider at the top right of the page enable ‘Developer mode’ (if it isn’t already)
 4. Click ‘Load unpacked’ at the top left of the page, browse to where you unpacked the downloaded extension and hit ‘Select’
