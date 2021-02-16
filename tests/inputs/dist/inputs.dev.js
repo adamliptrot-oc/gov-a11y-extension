@@ -112,9 +112,11 @@ if (inputs) {
     if (!itm.getAttribute('autocomplete') > "" && itmLabelText > "" && itm.getAttribute('type') != "radio" && itm.getAttribute('type') != "checkbox") {
       // check some common labels to see if it should have an autocomplete
       var arrLabels = ['name', 'phone', 'email', 'address line 1', 'address', 'town', 'country', 'postcode', 'postal code'];
+      var isMissing = false;
       arrLabels.forEach(function (autolabel) {
-        if (itmLabelText.indexOf(autolabel.toLowerCase()) >= 0) {
+        if (!isMissing && itmLabelText.indexOf(autolabel.toLowerCase()) >= 0) {
           itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-info"><span>Autocomplete</span>  <a href="https://design-system.service.gov.uk/components/text-input/#use-the-autocomplete-attribute" target="_blank">is autocomplete missing?</a></span>';
+          isMissing = true;
         }
       });
     } // WARN inputmode
