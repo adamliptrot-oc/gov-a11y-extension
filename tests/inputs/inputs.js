@@ -58,7 +58,7 @@ if(inputs){
             var hasValidLabel = false;
             if(itm.getAttribute("aria-label") > ""){
                 hasValidLabel = true;
-                itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-info"><span>Label</span> label set by aria-label</span>';
+                itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-warn"><span>Label</span> label set by aria-label</span>';
             }
 
             if(itm.getAttribute('aria-labelledby') > ""){
@@ -111,15 +111,18 @@ if(inputs){
             })
         }
 
-        // WARN inputmode
+        // WARN inputmode on dates
         if(!itm.getAttribute('inputmode') > "" && itmLabelText > ""){
             // check some common labels to see if it should have an inputmode
             var arrLabelsDate = ['month', 'day', 'year'];
             arrLabelsDate.forEach(function(autolabel){
                 if(autolabel.toLowerCase() == itmLabelText){
-                    itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-info"><span>Inputmode</span> <a href="https://design-system.service.gov.uk/components/text-input/#use-the-autocomplete-attribute" target="_blank">is autocomplete missing?</a></span>';
+                    itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-warn"><span>Inputmode</span> <a href="https://design-system.service.gov.uk/components/text-input/#numbers" target="_blank">inputmode/pattern missing</a></span>';
                 }
             })
+            if(itm.getAttribute('type') == "tel"){
+                itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-warn"><span>Type</span> <a href="https://design-system.service.gov.uk/components/date-input/" target="_blank">don\'t use tel for dates</a></span>';
+            }
         }
 
         if(itmLabelText > "" && itm.getAttribute('type') != "radio" && itm.getAttribute('type') != "checkbox"){
@@ -143,6 +146,16 @@ if(inputs){
 
         }
 
+        // WARN if using min/maxlength
+        if(itm.getAttribute('maxlength') || itm.getAttribute("minlength")){
+            itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-info"><span>Attr</span> be careful using min/max</span>';
+        }
+
+        // WARN if using required or aria-required
+        if(itm.getAttribute('required') || itm.getAttribute("aria-required")){
+            itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-info"><span>Attr</span> <a href="https://design-system.service.gov.uk/patterns/question-pages/" target="_blank">don\'t use required</a></span>';
+        }
+
 
 
         // **********
@@ -151,13 +164,6 @@ if(inputs){
 
 
 
-        // using max/minlength
-
-        // using aria-required
-
-        // Error messages and hints associated with inputs/fieldsets
-
-        // Error messages and hints not inside legend/label
 
         // Error summary between back link and h1
 

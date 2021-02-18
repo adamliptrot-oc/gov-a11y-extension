@@ -28,7 +28,7 @@ if(outlines){
                 var cap = itm.querySelector("caption").innerText;
                 itmCopy = itmCopy + '<span class="hmrc-ally-note"><span>Table</span> Caption: "' + cap + '"</span>';
             } else {
-                itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-warn"><span>Table</span> No caption</span>';
+                itmCopy = itmCopy + '<span class="hmrc-ally-note hmrc-ally-warn"><span>Table</span> <a href="https://design-system.service.gov.uk/components/table/#table-captions" target="_blank">Caption missing</a></span>';
             }
 
             // has table headers

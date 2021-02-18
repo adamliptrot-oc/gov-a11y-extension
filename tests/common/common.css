@@ -28,7 +28,12 @@
     color: #333!important;
     text-decoration: underline;
 }
-
+.hmrc-ally-warn {
+    background: gold;
+}
+.hmrc-ally-info {
+    background: palegoldenrod;
+}
 .hmrc-ally-warn,
 .hmrc-ally-info {
     margin-left: 0.4em;
@@ -96,3 +101,4 @@
 .hmrc-ally-aria .hmrc-ally-info span {
     background: rgb(41, 142, 196);
 }
+

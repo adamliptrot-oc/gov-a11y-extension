@@ -1,0 +1,3 @@
+.hmrc-ally-onlyissues .hmrc-ally-note:not( .hmrc-ally-info, .hmrc-ally-warn) {
+    display: none;
+}
