@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+    document.querySelector('#version').innerText = chrome.app.getDetails().version;
     chrome.tabs.insertCSS(null, { file:  `tests/common/common.css` });
     chrome.tabs.executeScript(null, { file: `tests/common/common.js` });
 

@@ -5,15 +5,24 @@ body {
     padding: 0;
     margin: 0;
 }
-h1 {
-    font-size: 18px;
-    font-weight: 100;
-    margin: 0 0 1em;
+header {
     padding: 10px 20px;
+    margin: 0 0 1em;
     background: teal;
     color: white;
-    font-weight: 300;
     border-bottom: 1px solid #333;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: start;
+}
+h1 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+header div {
+    font-size: 11px;
+    justify-self: end;
 }
 label {
     font-size: 13px;
@@ -75,7 +84,7 @@ button[aria-checked="true"]:after {
 .innerpanel {
     padding: 20px;
 }
-h1 + .innerpanel {
+header + .innerpanel {
     padding-top: 0;
     padding-bottom: 0;
 }
