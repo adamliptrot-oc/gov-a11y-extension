@@ -39,27 +39,52 @@ document.addEventListener('DOMContentLoaded', function () {
     var action = btn.getAttribute('id').toLowerCase();
     console.log(action);
 
-    if (btn.getAttribute('aria-checked') == "true") {
-      chrome.tabs.insertCSS(null, {
-        file: "tests/".concat(action, "/").concat(action, ".css")
-      });
-      chrome.tabs.executeScript(null, {
-        code: 'var ' + action + '  = true;'
-      }, function () {
-        chrome.tabs.executeScript(null, {
-          file: "tests/".concat(action, "/").concat(action, ".js")
+    if (action == "checkall") {
+      var otherbuttons = [].slice.call(document.querySelectorAll('[role="switch"]:not(#checkall, #onlyissues)'));
+
+      if (btn.getAttribute('aria-checked') == "true") {
+        otherbuttons.forEach(function (otherbtn) {
+          otherbtn.setAttribute('aria-checked', 'true');
+          fireUpdate(otherbtn);
         });
-      });
-      chrome.storage.sync.set(_defineProperty({}, action, "on"));
+        chrome.storage.sync.set(_defineProperty({}, action, "on"));
+      } else {
+        otherbuttons.forEach(function (otherbtn) {
+          otherbtn.setAttribute('aria-checked', 'false');
+          fireUpdate(otherbtn);
+        });
+        chrome.storage.sync.set(_defineProperty({}, action, "off"));
+      }
     } else {
-      chrome.tabs.executeScript(null, {
-        code: 'var ' + action + ' = false;'
-      }, function () {
-        chrome.tabs.executeScript(null, {
-          file: "tests/".concat(action, "/").concat(action, ".js")
+      if (btn.getAttribute('aria-checked') == "true") {
+        chrome.tabs.insertCSS(null, {
+          file: "tests/".concat(action, "/").concat(action, ".css")
         });
-      });
-      chrome.storage.sync.set(_defineProperty({}, action, "off"));
+        chrome.tabs.executeScript(null, {
+          code: 'var ' + action + '  = true;'
+        }, function () {
+          chrome.tabs.executeScript(null, {
+            file: "tests/".concat(action, "/").concat(action, ".js")
+          });
+        });
+        chrome.storage.sync.set(_defineProperty({}, action, "on"));
+      } else {
+        if (action != "onlyissues") {
+          document.querySelector('#checkall').setAttribute('aria-checked', 'false');
+          chrome.storage.sync.set({
+            "checkall": "off"
+          });
+        }
+
+        chrome.tabs.executeScript(null, {
+          code: 'var ' + action + ' = false;'
+        }, function () {
+          chrome.tabs.executeScript(null, {
+            file: "tests/".concat(action, "/").concat(action, ".js")
+          });
+        });
+        chrome.storage.sync.set(_defineProperty({}, action, "off"));
+      }
     }
   }
 }, false);

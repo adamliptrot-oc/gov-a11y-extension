@@ -6,53 +6,71 @@
   </head>
   <body>
     <div class="panel">
-        <h1>HMRC A11y</h1>
-        <div class="innerpanel">
+      <h1>HMRC A11y</h1>
+      <div class="innerpanel">
+        <p>Note: this is only a tool and is not a replacement for proper manual testing.</p>
+        <div class="innerpanel_grid">
           <div class="block">
-            <button id="onlyissues" role="switch" aria-checked="false"><span></span></button>
-            <label for="onlyissues">Only show issues</label>
+            <label for="checkall">Run all checks</label>
+            <button id="checkall" role="switch" aria-checked="false"><span></span></button>
           </div>
 
           <div class="block">
-            <button id="outlines" role="switch" aria-checked="false"><span></span></button>
-            <label for="outlines">Elements and markup</label>
-            <div class="legend">
+            <label for="onlyissues">Only show issues</label>
+            <button id="onlyissues" role="switch" aria-checked="false"><span></span></button>
+          </div>
+
+        </div>
+
+        <details>
+          <summary>Settings</summary>
+          <div class="innerpanel_grid">
+            <div class="block block--span2">
+              <div class="block">
+                <label for="outlines">Elements and markup</label>
+                <button id="outlines" role="switch" aria-checked="false"><span></span></button>
+              </div>
+              <div class="legend">
                 <div><span class="key key--fieldset"></span> Fieldset</div>
                 <div><span class="key key--label"></span> Label</div>
                 <div><span class="key key--legend"></span> Legend</div>
                 <div><span class="key key--heading"></span> Heading</div>
                 <div><span class="key key--table"></span> Table</div>
-                <div><span class="key key--dl"></span> Definition list</div>
+                <div><span class="key key--dl"></span> Defn list</div>
+              </div>
+            </div>
+
+            <div class="block">
+              <label for="pagetitle">Check page title</label>
+              <button id="pagetitle" role="switch" aria-checked="false"><span></span></button>
+            </div>
+
+            <div class="block">
+              <label for="aria">Check aria</label>
+              <button id="aria" role="switch" aria-checked="false" ><span></span></button>
+            </div>
+
+            <div class="block">
+              <label for="hiddencopy">Show hidden copy</label>
+              <button id="hiddencopy" role="switch" aria-checked="false"><span></span></button>
+            </div>
+
+            <div class="block">
+              <label for="inputs">Check inputs</label>
+              <button id="inputs" role="switch" aria-checked="false"><span></span></button>
+            </div>
+
+            <div class="block">
+              <label for="markup">Check libraries and timeout</label>
+              <button id="markup" role="switch" aria-checked="false"><span></span></button>
             </div>
           </div>
+        </details>
 
-          <div class="block">
-            <button id="pagetitle" role="switch" aria-checked="false"><span></span></button>
-            <label for="pagetitle">Check page title</label>
-          </div>
-
-          <div class="block">
-            <button id="aria" role="switch" aria-checked="false" ><span></span></button>
-            <label for="aria">Check aria</label>
-          </div>
-
-          <div class="block">
-            <button id="hiddencopy" role="switch" aria-checked="false"><span></span></button>
-            <label for="hiddencopy">Show hidden copy</label>
-          </div>
-
-          <div class="block">
-            <button id="inputs" role="switch" aria-checked="false"><span></span></button>
-            <label for="inputs">Check inputs</label>
-          </div>
-
-          <div class="block">
-            <button id="markup" role="switch" aria-checked="false"><span></span></button>
-            <label for="markup">Check libraries and timeout</label>
-          </div>
+      </div>
 
 
-        </div>
+
 
     </div>
 

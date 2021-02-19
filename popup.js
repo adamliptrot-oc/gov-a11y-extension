@@ -35,8 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
         var action = btn.getAttribute('id').toLowerCase();
         console.log(action)
 
-        if(btn.getAttribute('aria-checked') == "true"){
-            chrome.tabs.insertCSS(null, { file:  `tests/${action}/${action}.css` });
+        if(action == "checkall"){
+            var otherbuttons = [].slice.call(document.querySelectorAll('[role="switch"]:not(#checkall, #onlyissues)'));
+            if(btn.getAttribute('aria-checked') == "true"){
+                otherbuttons.forEach(function(otherbtn){
+                    otherbtn.setAttribute('aria-checked', 'true');
+                    fireUpdate(otherbtn)
+                })
+                chrome.storage.sync.set({[action]: "on"});
+            } else {
+                otherbuttons.forEach(function(otherbtn){
+                    otherbtn.setAttribute('aria-checked', 'false');
+                    fireUpdate(otherbtn)
+                })
+                chrome.storage.sync.set({[action]: "off"});
+            }
+        } else {
+            if(btn.getAttribute('aria-checked') == "true"){
+                chrome.tabs.insertCSS(null, { file:  `tests/${action}/${action}.css` });
                 chrome.tabs.executeScript(null, {
                     code: 'var ' + action + '  = true;'
                 }, function() {
@@ -44,12 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 chrome.storage.sync.set({[action]: "on"});
             } else {
+                if(action!="onlyissues"){
+                    document.querySelector('#checkall').setAttribute('aria-checked','false');
+                    chrome.storage.sync.set({"checkall": "off"});
+                }
                 chrome.tabs.executeScript(null, {
                     code: 'var ' + action + ' = false;'
                 }, function() {
                     chrome.tabs.executeScript(null, { file: `tests/${action}/${action}.js` });
                 });
                 chrome.storage.sync.set({[action]: "off"});
+            }
         }
 
     }
