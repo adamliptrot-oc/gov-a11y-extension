@@ -40,8 +40,8 @@ if(pagetitle){
                 serviceName = titleSections[1].trim().toLowerCase();
             }
             var pageServiceName = "";
-            if(document.querySelector('.govuk-header__content')){
-                pageServiceName = document.querySelector('.govuk-header__content').innerText.toLowerCase();
+            if(document.querySelector('.govuk-header__link--service-name')){
+                pageServiceName = document.querySelector('.govuk-header__link--service-name').innerText.toLowerCase();
             } else {
                 if(document.querySelector('.header__menu__proposition-name')){
                     pageServiceName = document.querySelector('.header__menu__proposition-name').innerText.toLowerCase();
@@ -49,6 +49,7 @@ if(pagetitle){
             }
             if(serviceName != pageServiceName){
                 err = true;
+                console.log(serviceName, pageServiceName)
                 if( errMessage > "" ){ errMessage =  errMessage + ", "}
                 errMessage = errMessage + "Service name does not match"
             }
